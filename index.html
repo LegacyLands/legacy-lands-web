@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Lands Studio</title>
+    <link rel="icon" type="image/png" href="assets/legacy-lands-logo.png">
+    <link rel="apple-touch-icon" href="assets/legacy-lands-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Legacy Lands</div>
+        <div class="language-switch">
+            <button class="lang-btn">
+                <span class="lang-text">中文</span>
+                <svg width="16" height="16" viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M7 10l5 5 5-5z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="main-title">Legacy Lands</h1>
+        </div>
+        <div class="section-connector"></div>
+    </div>
+
+    <section class="organization-section">
+        <div class="org-content">
+            <h2 class="org-title">Commercial Organization</h2>
+            <div class="org-line"></div>
+            <p class="org-description">A professional software development organization dedicated to creating elegant
+                solutions.</p>
+
+            <div class="members-container">
+                <button class="nav-arrow prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                </button>
+
+                <div class="members-slider">
+                    <div class="members-track">
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/xiao-liang.jpg" alt="Xiao Liang">
+                                </div>
+                            </div>
+                            <h3>Xiao Liang</h3>
+                            <p>Founder</p>
+                            <div class="member-skills">
+                                <span>Funding</span>
+                                <span>Planning</span>
+                                <span>Operation and maintenance</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/fei-ge.jpg" alt="Fei Ge">
+                                </div>
+                            </div>
+                            <h3>Fei Ge</h3>
+                            <p>Main Planner</p>
+                            <div class="member-skills">
+                                <span>Planning</span>
+                                <span>Operation and maintenance</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/xiao-chen.jpg" alt="Xiao Chen">
+                                </div>
+                            </div>
+                            <h3>Xiao Chen</h3>
+                            <p>Planner</p>
+                            <div class="member-skills">
+                                <span>Planning</span>
+                                <span>Operation and maintenance</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/lin-xi.jpg" alt="Lin Xi">
+                                </div>
+                            </div>
+                            <h3>Lin Xi (Psyche)</h3>
+                            <p>Main Developer</p>
+                            <div class="member-skills">
+                                <span>Java</span>
+                                <span>Elixir</span>
+                                <span>Frontend</span>
+                                <span>Backend</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/lin-yin.jpg" alt="Lin Yin">
+                                </div>
+                            </div>
+                            <h3>SakuyaAyane</h3>
+                            <p>Developer</p>
+                            <div class="member-skills">
+                                <span>Java</span>
+                                <span>Frontend</span>
+                                <span>Bukkit</span>
+                                <span>DevOps</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/duoduo-juzi.jpg" alt="DuoDuo JuZi">
+                                </div>
+                            </div>
+                            <h3>DuoDuo JuZi</h3>
+                            <p>Developer</p>
+                            <div class="member-skills">
+                                <span>Java</span>
+                                <span>Bukkit</span>
+                                <span>DevOps</span>
+                                <span>Network Technology</span>
+                                <span>Hardware Development</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/li-renyuan.jpg" alt="Li RenYuan">
+                                </div>
+                            </div>
+                            <h3>Li RenYuan</h3>
+                            <p>Developer</p>
+                            <div class="member-skills">
+                                <span>Java</span>
+                                <span>Bukkit</span>
+                                <span>DevOps</span>
+                            </div>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="member-avatar">
+                                <div class="avatar-circle">
+                                    <img src="assets/avatars/du-ya.jpg" alt="Du Ya">
+                                </div>
+                            </div>
+                            <h3>Du Ya</h3>
+                            <p>Main Builder</p>
+                            <div class="member-skills">
+                                <span>Builder</span>
+                                <span>Architects of various styles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-arrow next">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="section-connector"></div>
+    </section>
+
+    <section class="code-section">
+        <div class="code-container">
+            <div class="code-header">
+                <span class="file-name">Task.java</span>
+                <div class="window-controls">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <pre class="prettyprint lang-java">@TaskAutoStartAnnotation
+public class MyTask implements TaskInterface {
+    @Override
+    public ScheduledTask<?> start() {
+        return scheduleAtFixedRate(
+            () -> System.out.println("Task executed"),
+            Duration.ZERO,
+            Duration.ofSeconds(5)
+        );
+    }
+}</pre>
+        </div>
+
+        <div class="description-container">
+            <div class="description-content">
+                <h2>Legacy Lands Library</h2>
+                <div class="description-line"></div>
+                <p>Modern Java Library</p>
+                <div class="feature-tags">
+                    <span>Framework</span>
+                    <span>Open Source</span>
+                    <span>Modern Java</span>
+                </div>
+                <a href="https://github.com/LegacyLands/legacy-lands-library" class="github-link">
+                    <span class="github-icon">
+                        <svg height="24" viewBox="0 0 16 16" width="24">
+                            <path fill="#d4d4d4"
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                            </path>
+                        </svg>
+                    </span>
+                    View Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-section">
+        <div class="description-container">
+            <div class="description-content">
+                <h2>Legacy Lands Server</h2>
+                <div class="description-line"></div>
+                <p>Main commercial projects</p>
+                <div class="feature-tags">
+                    <span>Minecraft Server</span>
+                    <span>Civilization Simulation</span>
+                </div>
+                <a href="https://qm.qq.com/q/fhw4zzn9MA" class="github-link qq-link" target="_blank">
+                    <span class="qq-icon">
+                        <svg height="24" viewBox="0 0 24 24" width="24">
+                            <path fill="#d4d4d4"
+                                d="M12.003 2c-2.265 0-6.29 1.364-6.29 7.325v1.195S3.55 14.96 3.55 17.474c0 .665.17 1.025.281 1.025.114 0 .902-.484 1.748-2.072 0 0-.18 2.197 1.904 3.967 0 0-1.77.495-1.77 1.182 0 .686 4.078.43 6.29.43 2.213 0 6.29.256 6.29-.43 0-.687-1.77-1.182-1.77-1.182 2.085-1.77 1.905-3.967 1.905-3.967.846 1.588 1.634 2.072 1.746 2.072.111 0 .283-.36.283-1.025 0-2.514-2.166-6.954-2.166-6.954V9.325C18.29 3.364 14.268 2 12.003 2z" />
+                        </svg>
+                    </span>
+                    Join QQ Group
+                </a>
+            </div>
+        </div>
+
+        <div class="code-container">
+            <div class="code-header">
+                <span class="file-name">Server.java</span>
+                <div class="window-controls">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <pre class="prettyprint lang-java">@ServerAnnotation
+public class LegacyServer implements ServerInterface {
+    @Override
+    public void onEnable() {
+        // Initialize core components
+        CoreManager.init()
+            .loadModules()
+            .enableFeatures();
+            
+        // Start performance monitor
+        PerformanceMonitor.start();
+    }
+    
+    @Override
+    public void onDisable() {
+        CoreManager.shutdown();
+    }
+}</pre>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="mission-content">
+            <h2 class="mission-title">Legacy Lands Mission</h2>
+            <div class="mission-subtitle">Create Excellence, Inherit Eternity</div>
+            <div class="mission-line"></div>
+
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M12 2L1 12h3v9h6v-6h4v6h6v-9h3L12 2zm0 2.84L19.93 12H17v7h-4v-6H9v6H5v-7H2.07L12 4.84z" />
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <h4>Innovative Technology</h4>
+                    <p>Dedicated to exploring and applying cutting-edge technologies to deliver ultimate gaming
+                        experiences. Continuously innovating to drive the advancement of game technology.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                        </svg>
+                    </div>
+                    <h3>Community</h3>
+                    <h4>Community Building</h4>
+                    <p>Building a vibrant and creative gaming community where every player can find a sense of belonging
+                        and grow together.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+                        </svg>
+                    </div>
+                    <h3>Heritage</h3>
+                    <h4>Cultural Heritage</h4>
+                    <p>Perfectly blending gaming with culture, conveying positive values through unique gameplay and
+                        storytelling.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                    </div>
+                    <h3>Open Source</h3>
+                    <h4>Share & Contribute</h4>
+                    <p>Committed to open source development and knowledge sharing. We believe in collaborative
+                        innovation and giving back to the developer community.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                    </div>
+                    <h3>Experience</h3>
+                    <h4>User Experience First</h4>
+                    <p>Dedicated to creating exceptional user experiences through meticulous design and seamless
+                        interactions. Every detail matters in crafting memorable gaming moments.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87zM15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24C14.5 5.27 15 6.58 15 8s-.5 2.73-1.33 3.76c.42.14.86.24 1.33.24zm-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2v1z" />
+                        </svg>
+                    </div>
+                    <h3>Growth</h3>
+                    <h4>Sustainable Development</h4>
+                    <p>Fostering continuous growth through learning and adaptation. Building sustainable solutions that
+                        evolve with technology and community needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-content">
+            <h2 class="contact-title">Contact Us</h2>
+            <div class="contact-subtitle">Let's Create Together</div>
+            <div class="contact-line"></div>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M12.003 2c-2.265 0-6.29 1.364-6.29 7.325v1.195S3.55 14.96 3.55 17.474c0 .665.17 1.025.281 1.025.114 0 .902-.484 1.748-2.072 0 0-.18 2.197 1.904 3.967 0 0-1.77.495-1.77 1.182 0 .686 4.078.43 6.29.43 2.213 0 6.29.256 6.29-.43 0-.687-1.77-1.182-1.77-1.182 2.085-1.77 1.905-3.967 1.905-3.967.846 1.588 1.634 2.072 1.746 2.072.111 0 .283-.36.283-1.025 0-2.514-2.166-6.954-2.166-6.954V9.325C18.29 3.364 14.268 2 12.003 2z" />
+                        </svg>
+                    </div>
+                    <h3>QQ Group</h3>
+                    <p>Join our community</p>
+                    <a href="https://qm.qq.com/q/fhw4zzn9MA" class="contact-link" target="_blank">
+                        Join Now
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check our projects</p>
+                    <a href="https://github.com/LegacyLands" class="contact-link" target="_blank">
+                        View Projects
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4"
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                    </div>
+                    <h3>Founder</h3>
+                    <p>Contact the founder</p>
+                    <a href="mailto:362800930@qq.com" class="contact-link">
+                        Send Email
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#d4d4d4" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>© 2024 Legacy Lands Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="language.js"></script>
+</body>
+
+</html>

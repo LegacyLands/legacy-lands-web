@@ -358,11 +358,21 @@ function setAllAttributes() {
     });
 }
 
-function toggleLanguage() {
-    const oldLang = currentLang;
-    currentLang = currentLang === 'en' ? 'zh' : 'en';
-    console.log(`Language switched from ${oldLang} to ${currentLang}`);
+function updateButtonText() {
+    const langBtn = document.querySelector('.lang-btn');
+    if (langBtn) {
+        const langText = langBtn.querySelector('.lang-text');
+        if (langText) {
+            // 当前是英文时显示"中文"，当前是中文时显示"English"
+            langText.textContent = currentLang === 'en' ? '中文' : 'English';
+        }
+    }
+}
 
+function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'zh' : 'en';
+    console.log('Language switched to:', currentLang);
+    
     // 先更新内容
     updateContent();
     // 然后重新设置属性
@@ -560,7 +570,7 @@ function updateContent() {
 document.addEventListener('DOMContentLoaded', () => {
     // 首先设置所有属性
     setAllAttributes();
-
+    
     // 绑定按钮事件
     const langBtn = document.querySelector('.lang-btn');
     if (langBtn) {
@@ -570,8 +580,8 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleLanguage();
         });
     }
-
-    // 初始化内容
+    
+    // 初始化内容和按钮文本
     updateContent();
     updateButtonText();
 }); 

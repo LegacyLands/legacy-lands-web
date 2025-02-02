@@ -117,7 +117,7 @@ const translations = {
                 name: "Lin Xi (Psyche)",
                 role: "Main Developer"
             },
-            linyin: {
+            sakuyaayane: {
                 name: "SakuyaAyane",
                 role: "Developer"
             },
@@ -144,8 +144,8 @@ const translations = {
             founder: "创始人",
             mainplanner: "主策划",
             planner: "策划",
-            maindeveloper: "主程序",
-            developer: "程序",
+            maindeveloper: "主开发",
+            developer: "开发",
             mainbuilder: "主建筑师",
             builder: "建筑师"
         },
@@ -253,8 +253,8 @@ const translations = {
                 name: "林希 (Psyche)",
                 role: "主开发"
             },
-            linyin: {
-                name: "林隐",
+            sakuyaayane: {
+                name: "咲夜绫音",
                 role: "开发"
             },
             duoduojuzi: {

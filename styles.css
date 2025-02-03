@@ -1271,21 +1271,22 @@ pre.prettyprint {
 
 .contact-cards {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 4rem;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding: 0 2rem;
 }
 
 .contact-card {
-    flex: 1;
-    min-width: 280px;
-    max-width: 320px;
+    flex: 0 0 calc(25% - 2rem);
+    min-width: 250px;
+    max-width: none;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     transform: translateY(30px);
@@ -1434,4 +1435,20 @@ pre.prettyprint {
 .lang-text {
     font-size: 0.9rem;
     letter-spacing: 1px;
+}
+
+@media (max-width: 1200px) {
+    .contact-cards {
+        flex-wrap: wrap;
+    }
+    
+    .contact-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        flex: 0 0 100%;
+    }
 }

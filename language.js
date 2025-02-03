@@ -94,6 +94,11 @@ const translations = {
             subtitle: "Share & Contribute",
             description: "Committed to open source development and knowledge sharing. We believe in collaborative innovation and giving back to the developer community."
         },
+        afdian: {
+            title: "Afdian",
+            description: "Support our development",
+            button: "Support Us"
+        },
         sections: {
             mission: "Legacy Lands Mission",
             library: "Legacy Lands Library",
@@ -229,6 +234,11 @@ const translations = {
             title: "开源",
             subtitle: "分享与贡献",
             description: "致力于开源开发和知识共享。我们相信协作创新，并回馈开发者社区。"
+        },
+        afdian: {
+            title: "爱发电",
+            description: "支持我们的开发",
+            button: "支持我们"
         },
         sections: {
             mission: "遗迹之地使命",

@@ -1,0 +1,60 @@
+{
+    "sponsors": [
+        {
+            "id": 1,
+            "name": {
+                "en": "Zhang San",
+                "zh": "张三"
+            },
+            "tier": "diamond",
+            "date": "2024-03-15",
+            "logo": "",
+            "description": {
+                "en": "Diamond Sponsor",
+                "zh": "钻石赞助商"
+            }
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Li Si",
+                "zh": "李四"
+            },
+            "tier": "gold",
+            "date": "2024-03-14",
+            "logo": "",
+            "description": {
+                "en": "Gold Sponsor",
+                "zh": "黄金赞助商"
+            }
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Wang Wu",
+                "zh": "王五"
+            },
+            "tier": "silver",
+            "date": "2024-03-13",
+            "logo": "",
+            "description": {
+                "en": "Silver Sponsor",
+                "zh": "白银赞助商"
+            }
+        },
+        {
+            "id": 4,
+            "name": {
+                "en": "Zhao Liu",
+                "zh": "赵六"
+            },
+            "tier": "bronze",
+            "date": "2024-03-12",
+            "logo": "",
+            "description": {
+                "en": "Bronze Sponsor",
+                "zh": "青铜赞助商"
+            }
+        }
+    ]
+}

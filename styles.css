@@ -21,7 +21,7 @@ body {
     justify-content: center;
 }
 
-nav {
+body nav {
     padding: 2rem 5%;
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ nav {
     top: 0;
 }
 
-nav.hidden {
+body nav.hidden {
     transform: translateY(-100%);
 }
 
@@ -1399,7 +1399,7 @@ pre.prettyprint {
     }
 }
 
-.language-switch {
+body .language-switch {
     position: fixed;
     top: 2rem;
     right: 2rem;
@@ -1408,7 +1408,7 @@ pre.prettyprint {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.language-switch.hidden {
+body .language-switch.hidden {
     transform: translateY(-100%);
 }
 
@@ -1441,7 +1441,7 @@ pre.prettyprint {
     .contact-cards {
         flex-wrap: wrap;
     }
-    
+
     .contact-card {
         flex: 0 0 calc(50% - 1rem);
     }

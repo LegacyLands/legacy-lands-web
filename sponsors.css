@@ -1,0 +1,400 @@
+.sponsors-container {
+    min-height: 100vh;
+    padding: 120px 5% 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.sponsor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.sponsor-item img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.sponsors-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: titleFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.sponsors-subtitle {
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: subtitleFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.2s;
+}
+
+.sponsor-tiers {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: controlsFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.4s;
+}
+
+.tier-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Serif SC', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tier-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.tier-btn.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.tier-btn[data-tier="diamond"].active {
+    border-color: #B9F2FF;
+    color: #B9F2FF;
+}
+
+.tier-btn[data-tier="gold"].active {
+    border-color: #FFD700;
+    color: #FFD700;
+}
+
+.tier-btn[data-tier="silver"].active {
+    border-color: #C0C0C0;
+    color: #C0C0C0;
+}
+
+.tier-btn[data-tier="bronze"].active {
+    border-color: #CD7F32;
+    color: #CD7F32;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    position: relative;
+    opacity: 0;
+    animation: controlsFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+}
+
+#sponsorSearch {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#sponsorSearch:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: controlsFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.8s;
+}
+
+.sponsor-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: calc(1s + var(--card-index, 0) * 0.1s);
+}
+
+/* 当过滤或搜索时重置动画 */
+.sponsor-card.reset-animation {
+    animation: none;
+    animation: cardFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: calc(0.1s + var(--card-index, 0) * 0.05s);
+}
+
+.sponsor-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sponsor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.avatar-initial {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sponsor-name {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-tier {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tier-diamond {
+    color: #B9F2FF;
+}
+
+.tier-gold {
+    color: #FFD700;
+}
+
+.tier-silver {
+    color: #C0C0C0;
+}
+
+.tier-bronze {
+    color: #CD7F32;
+}
+
+.sponsor-date {
+    font-size: 0.8rem;
+    color: #808080;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subtitleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes controlsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsors-title {
+        font-size: 2.5rem;
+    }
+
+    .sponsor-tiers {
+        gap: 0.5rem;
+    }
+
+    .tier-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+.loading-message {
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.error-message {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.retry-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.retry-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 赞助按钮部分 */
+.sponsor-us-section {
+    margin-top: 4rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.sponsor-us-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sponsor-us-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sponsor-us-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.heart-icon {
+    transition: all 0.3s ease;
+}
+
+.sponsor-us-btn:hover .heart-icon path {
+    fill: rgba(255, 192, 203, 0.8);
+}
+
+/* 页脚部分 */
+.footer {
+    margin-top: 6rem;
+    color: #808080;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    animation: footerFadeIn 1s ease forwards 1.5s;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 0.5rem;
+}
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sponsor-us-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}

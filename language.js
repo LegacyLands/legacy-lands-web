@@ -95,7 +95,7 @@ const translations = {
             description: "Committed to open source development and knowledge sharing. We believe in collaborative innovation and giving back to the developer community."
         },
         afdian: {
-            title: "Afdian",
+            title: "Sponsor",
             description: "Support our development",
             button: "Support Us"
         },
@@ -137,6 +137,35 @@ const translations = {
             duya: {
                 name: "Du Ya",
                 role: "Main Builder"
+            }
+        },
+        sponsors: {
+            title: "Our Sponsors",
+            subtitle: "Thank you for your support!",
+            search: "Search sponsors...",
+            tiers: {
+                all: "All",
+                diamond: "Diamond",
+                gold: "Gold",
+                silver: "Silver",
+                bronze: "Bronze"
+            },
+            sponsorButton: "Sponsor Us",
+            footer: "© 2024 Legacy Lands Studio. All rights reserved.",
+            card: {
+                tier: {
+                    diamond: "Diamond",
+                    gold: "Gold",
+                    silver: "Silver",
+                    bronze: "Bronze"
+                }
+            }
+        },
+        contact: {
+            sponsor: {
+                title: "Sponsor",
+                description: "View our sponsors and support us",
+                button: "View Sponsors"
             }
         }
     },
@@ -236,7 +265,7 @@ const translations = {
             description: "致力于开源开发和知识共享。我们相信协作创新，并回馈开发者社区。"
         },
         afdian: {
-            title: "爱发电",
+            title: "赞助",
             description: "支持我们的开发",
             button: "支持我们"
         },
@@ -278,6 +307,35 @@ const translations = {
             duya: {
                 name: "渡鸦",
                 role: "主建筑师"
+            }
+        },
+        sponsors: {
+            title: "赞助者名单",
+            subtitle: "感谢您的支持！",
+            search: "搜索赞助者...",
+            tiers: {
+                all: "全部",
+                diamond: "钻石",
+                gold: "黄金",
+                silver: "白银",
+                bronze: "青铜"
+            },
+            sponsorButton: "赞助我们",
+            footer: "© 2024 遗迹之地工作室。保留所有权利。",
+            card: {
+                tier: {
+                    diamond: "钻石",
+                    gold: "黄金",
+                    silver: "白银",
+                    bronze: "青铜"
+                }
+            }
+        },
+        contact: {
+            sponsor: {
+                title: "赞助",
+                description: "查看赞助者名单并支持我们",
+                button: "查看赞助者"
             }
         }
     }
@@ -382,7 +440,7 @@ function updateButtonText() {
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'zh' : 'en';
     console.log('Language switched to:', currentLang);
-    
+
     // 先更新内容
     updateContent();
     // 然后重新设置属性
@@ -392,42 +450,23 @@ function toggleLanguage() {
 }
 
 function updateContent() {
-    console.log('Starting content update, current language:', currentLang);
     const t = translations[currentLang];
 
-    // 添加调试信息
-    const debugElements = {
-        mainTitle: document.querySelector('.main-title'),
-        logo: document.querySelector('.logo'),
-        orgTitle: document.querySelector('.org-title'),
-        orgDesc: document.querySelector('.org-description'),
-        missionTitle: document.querySelector('.mission-title'),
-        contactTitle: document.querySelector('.contact-title'),
-        codeSections: document.querySelectorAll('.code-section'),
-        missionCards: document.querySelector('.mission-section')?.querySelectorAll('.mission-card'),
-        contactCards: document.querySelector('.contact-section')?.querySelectorAll('.contact-card')
-    };
-
-    console.log('Found elements:', Object.entries(debugElements).reduce((acc, [key, el]) => {
-        acc[key] = el ? (el.length || true) : false;
-        return acc;
-    }, {}));
-
-    // 添加更多调试信息
-    document.querySelectorAll('.member-skills span').forEach(skill => {
-        const skillKey = skill.getAttribute('data-skill');
-        const oldText = skill.textContent;
-        const newText = t.skills[skillKey];
-        console.log(`Updating skill: ${oldText} -> ${newText} (key: ${skillKey})`);
-    });
+    // 安全地更新文本内容
+    function safeSetText(selector, text) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.textContent = text;
+        }
+    }
 
     // 主标题和Logo
-    document.querySelector('.main-title').textContent = t.title;
-    document.querySelector('.logo').textContent = t.title;
+    safeSetText('.main-title', t.title);
+    safeSetText('.logo', t.title);
 
     // 组织部分
-    document.querySelector('.org-title').textContent = t.orgTitle;
-    document.querySelector('.org-description').textContent = t.orgDescription;
+    safeSetText('.org-title', t.orgTitle);
+    safeSetText('.org-description', t.orgDescription);
 
     // 成员部分
     document.querySelectorAll('.member-card').forEach(card => {
@@ -574,13 +613,56 @@ function updateContent() {
             ? "© 2024 Legacy Lands Studio. All rights reserved."
             : "© 2024 遗迹之地工作室。保留所有权利。";
     }
+
+    // 更新赞助页面的内容
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = key.split('.').reduce((obj, key) => obj && obj[key], t);
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+
+    // 更新搜索框占位符
+    const searchInput = document.querySelector('[data-i18n-placeholder]');
+    if (searchInput) {
+        const key = searchInput.getAttribute('data-i18n-placeholder');
+        const translation = key.split('.').reduce((obj, key) => obj && obj[key], t);
+        if (translation) {
+            searchInput.placeholder = translation;
+        }
+    }
+
+    // 更新赞助者卡片的等级显示
+    document.querySelectorAll('.sponsor-tier').forEach(tier => {
+        const tierKey = tier.getAttribute('data-i18n');
+        if (tierKey) {
+            const translation = tierKey.split('.').reduce((obj, key) => obj && obj[key], t);
+            if (translation) {
+                tier.textContent = translation;
+            }
+        }
+    });
+
+    // 更新赞助者卡片的名称和描述
+    document.querySelectorAll('.sponsor-name').forEach(name => {
+        const nameEn = name.getAttribute('data-name-en');
+        const nameZh = name.getAttribute('data-name-zh');
+        name.textContent = currentLang === 'en' ? nameEn : nameZh;
+    });
+
+    document.querySelectorAll('.sponsor-description').forEach(desc => {
+        const descEn = desc.getAttribute('data-desc-en');
+        const descZh = desc.getAttribute('data-desc-zh');
+        desc.textContent = currentLang === 'en' ? descEn : descZh;
+    });
 }
 
 // 页面加载完成后初始化语言
 document.addEventListener('DOMContentLoaded', () => {
     // 首先设置所有属性
     setAllAttributes();
-    
+
     // 绑定按钮事件
     const langBtn = document.querySelector('.lang-btn');
     if (langBtn) {
@@ -590,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleLanguage();
         });
     }
-    
+
     // 初始化内容和按钮文本
     updateContent();
     updateButtonText();

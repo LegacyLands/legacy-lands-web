@@ -1,3 +1,11 @@
+// 在文件开头添加字体加载检测
+document.fonts.ready.then(() => {
+    const logo = document.querySelector('.logo');
+    const langSwitch = document.querySelector('.language-switch');
+    logo.classList.add('font-loaded');
+    langSwitch.style.opacity = '1';
+});
+
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -321,6 +329,7 @@ const slider = {
 // 初始化轮询
 slider.init();
 
+// 修改滚动处理逻辑
 let lastScrollY = window.scrollY;
 let ticking = false;
 

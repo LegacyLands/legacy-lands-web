@@ -128,9 +128,12 @@
 
 .sponsors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
+    max-width: 1200px;
+    justify-content: center;
+    padding: 0 2rem;
     opacity: 0;
     animation: controlsFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.8s;
 }
@@ -145,6 +148,11 @@
     transform: translateY(30px);
     animation: cardFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     animation-delay: calc(1s + var(--card-index, 0) * 0.1s);
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 /* 当过滤或搜索时重置动画 */
@@ -155,9 +163,10 @@
 }
 
 .sponsor-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.05);
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .sponsor-avatar {
@@ -171,6 +180,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sponsor-avatar img {
@@ -191,11 +201,50 @@
     font-size: 1.2rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-name {
+    transform: translateY(-2px);
+    color: #ffffff;
 }
 
 .sponsor-tier {
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-tier {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.sponsor-description {
+    color: #808080;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-description {
+    transform: translateY(-2px);
+    color: #a0a0a0;
+}
+
+.sponsor-date {
+    font-size: 0.8rem;
+    color: #808080;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-date {
+    transform: translateY(-2px);
+    opacity: 0.8;
 }
 
 .tier-diamond {
@@ -212,11 +261,6 @@
 
 .tier-bronze {
     color: #CD7F32;
-}
-
-.sponsor-date {
-    font-size: 0.8rem;
-    color: #808080;
 }
 
 @keyframes titleFadeIn {
@@ -256,14 +300,18 @@
 }
 
 @keyframes cardFadeIn {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(30px) scale(0.95);
     }
 
-    to {
+    70% {
+        transform: translateY(-5px) scale(1.02);
+    }
+
+    100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -279,6 +327,11 @@
     .tier-btn {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
+    }
+
+    .sponsors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 0 1rem;
     }
 }
 
@@ -397,4 +450,74 @@
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
     }
+}
+
+/* 卡片内容的过渡效果 */
+.sponsor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-avatar {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.sponsor-name {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-name {
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.sponsor-tier {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-tier {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.sponsor-description {
+    color: #808080;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-description {
+    transform: translateY(-2px);
+    color: #a0a0a0;
+}
+
+.sponsor-date {
+    font-size: 0.8rem;
+    color: #808080;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card:hover .sponsor-date {
+    transform: translateY(-2px);
+    opacity: 0.8;
 }

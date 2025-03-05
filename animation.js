@@ -353,4 +353,82 @@ window.addEventListener('scroll', () => {
         });
         ticking = true;
     }
+});
+
+// 服务器展示轮播图
+const serverShowcase = {
+    track: document.querySelector('.showcase-track'),
+    slides: document.querySelectorAll('.showcase-slide'),
+    dots: document.querySelectorAll('.showcase-dots .dot'),
+    prevBtn: document.querySelector('.showcase-arrow.prev'),
+    nextBtn: document.querySelector('.showcase-arrow.next'),
+    currentIndex: 0,
+    slideWidth: 0,
+    slideCount: 0,
+    autoPlayTimer: null,
+    
+    init() {
+        if (!this.track) return;
+        
+        this.slideCount = this.slides.length;
+        
+        // 绑定事件
+        this.prevBtn.addEventListener('click', () => this.goToSlide(this.currentIndex - 1));
+        this.nextBtn.addEventListener('click', () => this.goToSlide(this.currentIndex + 1));
+        
+        // 点击指示器切换
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // 自动轮播
+        this.startAutoPlay();
+        
+        // 鼠标悬停时暂停自动轮播
+        const container = this.track.parentElement.parentElement;
+        container.addEventListener('mouseenter', () => this.stopAutoPlay());
+        container.addEventListener('mouseleave', () => this.startAutoPlay());
+    },
+    
+    goToSlide(index) {
+        // 处理边界情况
+        if (index < 0) {
+            index = this.slideCount - 1;
+        } else if (index >= this.slideCount) {
+            index = 0;
+        }
+        
+        // 更新当前索引
+        this.currentIndex = index;
+        
+        // 更新轨道位置
+        this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+        
+        // 更新指示器状态
+        this.dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === this.currentIndex);
+        });
+    },
+    
+    startAutoPlay() {
+        this.stopAutoPlay();
+        this.autoPlayTimer = setInterval(() => {
+            this.goToSlide(this.currentIndex + 1);
+        }, 5000); // 5秒切换一次
+    },
+    
+    stopAutoPlay() {
+        if (this.autoPlayTimer) {
+            clearInterval(this.autoPlayTimer);
+            this.autoPlayTimer = null;
+        }
+    }
+};
+
+// 在页面加载完毕后的适当位置初始化轮播图
+document.addEventListener('DOMContentLoaded', () => {
+    // 初始化其他功能...
+    
+    // 初始化服务器图片轮播
+    serverShowcase.init();
 }); 

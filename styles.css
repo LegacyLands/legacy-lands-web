@@ -1452,3 +1452,108 @@ body .language-switch.hidden {
         flex: 0 0 100%;
     }
 }
+
+/* 服务器展示轮播图样式 */
+.server-showcase {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.server-showcase:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.showcase-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.showcase-slide {
+    flex: 0 0 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.showcase-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.showcase-arrow:hover {
+    opacity: 1;
+}
+
+.showcase-arrow.prev {
+    left: 15px;
+}
+
+.showcase-arrow.next {
+    right: 15px;
+}
+
+.showcase-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    z-index: 2;
+}
+
+.showcase-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.showcase-dots .dot.active {
+    background: #ffffff;
+}
+
+.showcase-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    z-index: 1;
+}

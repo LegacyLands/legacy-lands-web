@@ -265,31 +265,55 @@ public class MyTask implements TaskInterface {
 
         <div class="code-container">
             <div class="code-header">
-                <span class="file-name">Server.java</span>
+                <span class="file-name">ServerBuild.png</span>
                 <div class="window-controls">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <pre class="prettyprint lang-java">@ServerAnnotation
-public class LegacyServer implements ServerInterface {
-    @Override
-    public void onEnable() {
-        // Initialize core components
-        CoreManager.init()
-            .loadModules()
-            .enableFeatures();
-            
-        // Start performance monitor
-        PerformanceMonitor.start();
-    }
-    
-    @Override
-    public void onDisable() {
-        CoreManager.shutdown();
-    }
-}</pre>
+            <div class="server-showcase">
+                <div class="showcase-container">
+                    <div class="showcase-track">
+                        <div class="showcase-slide">
+                            <img src="assets/server/1.png" alt="Server Screenshot 1" class="showcase-image">
+                        </div>
+                        <div class="showcase-slide">
+                            <img src="assets/server/2.png" alt="Server Screenshot 2" class="showcase-image">
+                        </div>
+                        <div class="showcase-slide">
+                            <img src="assets/server/3.png" alt="Server Screenshot 3" class="showcase-image">
+                        </div>
+                        <div class="showcase-slide">
+                            <img src="assets/server/4.png" alt="Server Screenshot 4" class="showcase-image">
+                        </div>
+                        <div class="showcase-slide">
+                            <img src="assets/server/5.png" alt="Server Screenshot 5" class="showcase-image">
+                        </div>
+                        <div class="showcase-slide">
+                            <img src="assets/server/6.png" alt="Server Screenshot 6" class="showcase-image">
+                        </div>
+                    </div>
+                    <button class="showcase-arrow prev">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+                    <button class="showcase-arrow next">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#fff" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="showcase-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                    <span class="dot" data-index="5"></span>
+                </div>
+            </div>
         </div>
     </section>
 

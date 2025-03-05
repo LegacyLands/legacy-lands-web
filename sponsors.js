@@ -61,7 +61,7 @@ function createSponsorCard(sponsor, index) {
             ${sponsor.name[currentLang]}
         </div>
         <div class="sponsor-tier tier-${sponsor.tier}" data-i18n="sponsors.card.tier.${sponsor.tier.toLowerCase()}">
-            ${sponsor.tier}
+            ${translations[currentLang]?.sponsors?.card?.tier?.[sponsor.tier.toLowerCase()] || sponsor.tier}
         </div>
         <div class="sponsor-description" data-desc-en="${sponsor.description.en}" data-desc-zh="${sponsor.description.zh}">
             ${sponsor.description[currentLang]}
@@ -146,6 +146,10 @@ function resetAndReload() {
     });
 }
 
+// 添加一个全局变量导出，以便 language.js 可以访问
+window.sponsorsData = sponsorsData;
+window.resetAndReload = resetAndReload;
+
 // 修改加载数据的函数
 async function loadSponsorsData() {
     try {
@@ -229,6 +233,10 @@ async function loadSponsorsData() {
             // 如果加载失败，使用备选数据
             sponsorsData = fallbackData.sponsors;
         }
+
+        // 导出到全局变量，使 language.js 可以访问
+        window.sponsorsData = sponsorsData;
+        window.resetAndReload = resetAndReload;
 
         // 初始化页面
         initSponsors();

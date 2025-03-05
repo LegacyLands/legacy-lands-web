@@ -334,6 +334,9 @@ const translations = {
     }
 };
 
+// 在 translations 对象定义后添加
+window.translations = translations;
+
 let currentLang = 'en';  // 默认英文
 let originalAttributes = null;
 
@@ -433,6 +436,9 @@ function updateButtonText() {
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'zh' : 'en';
     console.log('Language switched to:', currentLang);
+
+    // 将当前语言设置暴露给全局作用域，以便其他脚本访问
+    window.currentLang = currentLang;
 
     // 先更新内容
     updateContent();
@@ -649,10 +655,18 @@ function updateContent() {
         const descZh = desc.getAttribute('data-desc-zh');
         desc.textContent = currentLang === 'en' ? descEn : descZh;
     });
+
+    // 更新赞助者卡片（如果在 sponsors 页面）
+    if (window.sponsorsData && Array.isArray(window.sponsorsData)) {
+        resetAndReload(); // 重新加载赞助者卡片
+    }
 }
 
 // 页面加载完成后初始化语言
 document.addEventListener('DOMContentLoaded', () => {
+    // 设置当前语言为全局变量
+    window.currentLang = currentLang;
+
     // 首先设置所有属性
     setAllAttributes();
 

@@ -44,6 +44,11 @@ const translations = {
             description: "Contact the founder",
             button: "Send Email"
         },
+        sponsor: {
+            title: "Sponsor",
+            description: "Support our development",
+            button: "View Sponsors"
+        },
         // 项目部分
         library: {
             title: "Legacy Lands Library",
@@ -93,11 +98,6 @@ const translations = {
             title: "Open Source",
             subtitle: "Share & Contribute",
             description: "Committed to open source development and knowledge sharing. We believe in collaborative innovation and giving back to the developer community."
-        },
-        afdian: {
-            title: "Sponsor",
-            description: "Support our development",
-            button: "Support Us"
         },
         sections: {
             mission: "Legacy Lands Mission",
@@ -214,6 +214,11 @@ const translations = {
             description: "联系创始人",
             button: "发送邮件"
         },
+        sponsor: {
+            title: "赞助",
+            description: "查看赞助者名单并支持我们",
+            button: "查看赞助者"
+        },
         // 项目部分
         library: {
             title: "遗迹之地库",
@@ -263,11 +268,6 @@ const translations = {
             title: "开源",
             subtitle: "分享与贡献",
             description: "致力于开源开发和知识共享。我们相信协作创新，并回馈开发者社区。"
-        },
-        afdian: {
-            title: "赞助",
-            description: "支持我们的开发",
-            button: "支持我们"
         },
         sections: {
             mission: "遗迹之地使命",
@@ -329,13 +329,6 @@ const translations = {
                     silver: "白银",
                     bronze: "青铜"
                 }
-            }
-        },
-        contact: {
-            sponsor: {
-                title: "赞助",
-                description: "查看赞助者名单并支持我们",
-                button: "查看赞助者"
             }
         }
     }

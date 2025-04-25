@@ -11,7 +11,9 @@ const translations = {
             maindeveloper: "Main Developer",
             developer: "Developer",
             mainbuilder: "Main Builder",
-            builder: "Builder"
+            builder: "Builder",
+            minecrafttechnician: "Minecraft Technician",
+            graphicdesigner: "Graphic Designer"
         },
         // 使命部分
         missionTitle: "Legacy Lands Mission",
@@ -119,20 +121,24 @@ const translations = {
                 role: "Planner"
             },
             linxi: {
-                name: "Lin Xi (Psyche)",
+                name: "Psyche",
                 role: "Main Developer"
             },
-            sakuyaayane: {
-                name: "SakuyaAyane",
+            zuijiu: {
+                name: "Zui Jiu",
                 role: "Developer"
             },
-            duoduojuzi: {
-                name: "DuoDuo JuZi",
-                role: "Developer"
+            neglectdream: {
+                name: "NeglectDream",
+                role: "Developer, Technician"
             },
-            lirenyuan: {
-                name: "Li RenYuan",
-                role: "Developer"
+            autuo: {
+                name: "Autuo",
+                role: "Technician"
+            },
+            cuixuan: {
+                name: "Cui Xuan",
+                role: "Graphic Designer"
             },
             duya: {
                 name: "Du Ya",
@@ -151,7 +157,7 @@ const translations = {
                 bronze: "Bronze"
             },
             sponsorButton: "Sponsor Us",
-            footer: "© 2024 Legacy Lands Studio. All rights reserved.",
+            footer: "© 2025 Legacy Lands Studio. All rights reserved.",
             card: {
                 tier: {
                     diamond: "Diamond",
@@ -171,25 +177,27 @@ const translations = {
     },
     zh: {
         title: "遗迹之地",
-        orgTitle: "商业组织",
-        orgDescription: "致力于创造优雅解决方案的专业软件开发组织。",
+        orgTitle: "专业团队",
+        orgDescription: "致力于打造优雅解决方案的专业软件开发团队。",
         // 组织成员部分
         roles: {
             founder: "创始人",
             mainplanner: "主策划",
             planner: "策划",
-            maindeveloper: "主开发",
-            developer: "开发",
+            maindeveloper: "首席开发者",
+            developer: "开发者",
             mainbuilder: "主建筑师",
-            builder: "建筑师"
+            builder: "建筑师",
+            minecrafttechnician: "技术专员",
+            graphicdesigner: "平面设计师"
         },
         // 使命部分
-        missionTitle: "遗迹之地使命",
-        missionSubtitle: "创造不凡 传承永恒",
+        missionTitle: "遗迹之地的使命",
+        missionSubtitle: "创造不凡，传承经典",
         innovation: {
             title: "创新",
-            subtitle: "创新科技",
-            description: "致力于探索和应用前沿技术，为玩家带来极致的游戏体验。通过不断创新，推动游戏技术的发展。"
+            subtitle: "前沿科技",
+            description: "致力于探索和应用前沿技术，为玩家带来极致的游戏体验。通过不断创新，推动游戏技术发展。"
         },
         community: {
             title: "社区",
@@ -198,7 +206,7 @@ const translations = {
         },
         // 联系部分
         contactTitle: "联系我们",
-        contactSubtitle: "加入我们？或者联系我们？",
+        contactSubtitle: "寻求合作或加入我们？",
         qqgroup: {
             title: "QQ 群",
             description: "加入我们的社区",
@@ -206,7 +214,7 @@ const translations = {
         },
         github: {
             title: "GitHub",
-            description: "查看我们的项目",
+            description: "浏览我们的开源项目",
             button: "查看项目"
         },
         founder: {
@@ -216,7 +224,7 @@ const translations = {
         },
         sponsor: {
             title: "赞助",
-            description: "查看赞助者名单并支持我们",
+            description: "查看赞助者并支持我们",
             button: "查看赞助者"
         },
         // 项目部分
@@ -229,7 +237,7 @@ const translations = {
         server: {
             title: "遗迹之地服务器",
             description: "主要商业项目",
-            tags: ["我的世界服务器", "文明模拟"],
+            tags: ["Minecraft 服务器", "文明模拟"],
             button: "加入 QQ 群"
         },
         // 成员技能
@@ -242,11 +250,11 @@ const translations = {
             frontend: "前端",
             backend: "后端",
             bukkit: "Bukkit",
-            devops: "运维",
+            devops: "DevOps",
             builder: "建筑",
             architectsofvariousstyles: "多风格建筑师",
-            networktechnology: "网络技术",
-            hardwaredevelopment: "电子硬件"
+            minecrafttechnician: "技术专员",
+            graphicdesigner: "平面设计师"
         },
         // 使命卡片
         heritage: {
@@ -270,7 +278,7 @@ const translations = {
             description: "致力于开源开发和知识共享。我们相信协作创新，并回馈开发者社区。"
         },
         sections: {
-            mission: "遗迹之地使命",
+            mission: "遗迹之地的使命",
             library: "遗迹之地库",
             server: "遗迹之地服务器",
             contact: "联系我们"
@@ -289,20 +297,24 @@ const translations = {
                 role: "策划"
             },
             linxi: {
-                name: "林希 (Psyche)",
-                role: "主开发"
+                name: "灵希 Psyche",
+                role: "首席开发者"
             },
-            sakuyaayane: {
-                name: "咲夜绫音",
-                role: "开发"
+            zuijiu: {
+                name: "醉酒",
+                role: "开发者"
             },
-            duoduojuzi: {
-                name: "多多橘子",
-                role: "开发"
+            neglectdream: {
+                name: "NeglectDream",
+                role: "开发者、技术专员"
             },
-            lirenyuan: {
-                name: "李任渊",
-                role: "开发"
+            autuo: {
+                name: "Autuo",
+                role: "技术专员"
+            },
+            cuixuan: {
+                name: "崔铉",
+                role: "平面设计师"
             },
             duya: {
                 name: "渡鸦",
@@ -321,7 +333,7 @@ const translations = {
                 bronze: "青铜"
             },
             sponsorButton: "赞助我们",
-            footer: "© 2024 遗迹之地工作室。保留所有权利。",
+            footer: "© 2025 遗迹之地工作室。保留所有权利。",
             card: {
                 tier: {
                     diamond: "钻石",
@@ -609,8 +621,8 @@ function updateContent() {
     const footer = document.querySelector('.footer p');
     if (footer) {
         footer.textContent = currentLang === 'en'
-            ? "© 2024 Legacy Lands Studio. All rights reserved."
-            : "© 2024 遗迹之地工作室。保留所有权利。";
+            ? "© 2025 Legacy Lands Studio. All rights reserved."
+            : "© 2025 遗迹之地工作室。保留所有权利。";
     }
 
     // 更新赞助页面的内容

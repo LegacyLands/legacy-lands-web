@@ -143,6 +143,10 @@ const translations = {
             duya: {
                 name: "Du Ya",
                 role: "Main Builder"
+            },
+            heiyu: {
+                name: "Hei Yu",
+                role: "Builder"
             }
         },
         sponsors: {
@@ -319,6 +323,10 @@ const translations = {
             duya: {
                 name: "渡鸦",
                 role: "主建筑师"
+            },
+            heiyu: {
+                name: "黑鱼",
+                role: "建筑师"
             }
         },
         sponsors: {

@@ -861,7 +861,36 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 初始化数字动画
     initCountingAnimations();
+    
+    // 处理hash路由
+    handleHashRouting();
 });
+
+// 处理hash路由（包括带斜杠的情况）
+function handleHashRouting() {
+    function scrollToSection() {
+        const hash = window.location.hash;
+        if (hash) {
+            // 移除可能的斜杠和其他字符，只保留ID
+            const cleanHash = hash.replace(/[\/\?#]/g, '').split(/[\/\?]/)[0];
+            if (cleanHash) {
+                const element = document.getElementById(cleanHash);
+                if (element) {
+                    element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        }
+    }
+    
+    // 页面加载时处理
+    scrollToSection();
+    
+    // hash变化时处理
+    window.addEventListener('hashchange', scrollToSection);
+}
 
 // 数字计数动画函数
 function animateNumber(element, target, duration = 2000) {

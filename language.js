@@ -16,25 +16,58 @@ const translations = {
             graphicdesigner: "Graphic Designer"
         },
         // 使命部分
-        missionTitle: "Legacy Lands Mission",
-        missionSubtitle: "Create Excellence, Inherit Eternity",
+        missionTitle: "Our Mission",
+        missionSubtitle: "Building the Future, Shaping Legacy",
         innovation: {
             title: "Innovation",
-            subtitle: "Innovative Technology",
-            description: "Dedicated to exploring and applying cutting-edge technologies to deliver ultimate gaming experiences. Continuously innovating to drive the advancement of game technology."
+            subtitle: "Pushing Boundaries",
+            description: "We embrace cutting-edge technologies and innovative approaches to create exceptional gaming experiences. Our passion for exploration drives us to continuously evolve and improve."
         },
         community: {
             title: "Community",
-            subtitle: "Community Building",
-            description: "Building a vibrant and creative gaming community where every player can find a sense of belonging and grow together."
+            subtitle: "Building Together",
+            description: "We foster vibrant communities where creativity thrives and lasting connections are formed. Every voice matters in shaping our shared digital worlds."
         },
         // 联系部分
         contactTitle: "Contact Us",
-        contactSubtitle: "Join us? Or contact us?",
+        contactSubtitle: "Ready to Collaborate? Let's Connect!",
+        // Hero section translations
+        hero: {
+            badge: "Open Source & Commercial",
+            title: "Professional Minecraft Complete Production Team",
+            description: "Full-spectrum Minecraft professional team integrating server development, architectural design, and technical innovation.<br>Specialized in independently developing and operating large-scale immersive civilization simulation servers, while actively contributing to the open-source ecosystem by providing enterprise-grade technical frameworks and professional solutions for Minecraft plugin development.",
+            viewProjects: "View Our Projects",
+            github: "GitHub",
+            stats: {
+                teamMembers: "Team Members",
+                majorProjects: "Major Projects", 
+                codeCommits: "Code Commits",
+                linesOfCode: "Lines of Code"
+            }
+        },
+        // Core business section
+        coreProjects: {
+            title: "Our Core Projects",
+            description: "Two flagship projects that showcase our expertise in modern Minecraft development",
+            library: {
+                title: "Legacy Lands Library",
+                subtitle: "Enterprise-grade Minecraft Server Plugin Development Framework",
+                description: "An enterprise-grade modular framework specifically designed for Minecraft server plugin development, providing professional development tools and technical support.",
+                tags: ["Open Source", "Enterprise-grade", "Plugin Development", "Modular Framework"],
+                button: "Explore Library"
+            },
+            server: {
+                title: "Legacy Lands Server", 
+                subtitle: "Minecraft Civilization Simulation Platform",
+                description: "An immersive Minecraft server focused on civilization simulation, nation building, and collaborative gameplay experiences for a thriving community.",
+                tags: ["Commercial", "Multiplayer", "Civilization Building", "Community"],
+                button: "Join Server"
+            }
+        },
         qqgroup: {
             title: "QQ Group",
             description: "Join our community",
-            button: "Join Now"
+            button: "1022665227"
         },
         github: {
             title: "GitHub",
@@ -83,26 +116,26 @@ const translations = {
         // 使命卡片
         heritage: {
             title: "Heritage",
-            subtitle: "Cultural Heritage",
-            description: "Perfectly blending gaming with culture, conveying positive values through unique gameplay and storytelling."
+            subtitle: "Meaningful Legacy",
+            description: "We create lasting experiences that blend cultural depth with engaging gameplay. Every project carries purpose, leaving a positive impact on players and communities."
         },
         experience: {
             title: "Experience",
-            subtitle: "User Experience First",
-            description: "Dedicated to creating exceptional user experiences through meticulous design and seamless interactions. Every detail matters in crafting memorable gaming moments."
+            subtitle: "Crafted Excellence",
+            description: "We meticulously design every interaction to create seamless, engaging experiences. From intuitive interfaces to immersive gameplay, quality is in every detail."
         },
         growth: {
             title: "Growth",
-            subtitle: "Sustainable Development",
-            description: "Fostering continuous growth through learning and adaptation. Building sustainable solutions that evolve with technology and community needs."
+            subtitle: "Continuous Evolution",
+            description: "We believe in iterative improvement and learning from every challenge. Our commitment to growth ensures that each project surpasses the last in quality and innovation."
         },
         opensource: {
             title: "Open Source",
-            subtitle: "Share & Contribute",
-            description: "Committed to open source development and knowledge sharing. We believe in collaborative innovation and giving back to the developer community."
+            subtitle: "Collaborative Innovation",
+            description: "We contribute to the global developer community by open-sourcing our tools and frameworks. Knowledge sharing accelerates innovation and creates opportunities for everyone."
         },
         sections: {
-            mission: "Legacy Lands Mission",
+            mission: "Our Mission",
             library: "Legacy Lands Library",
             server: "Legacy Lands Server",
             contact: "Contact Us"
@@ -196,25 +229,58 @@ const translations = {
             graphicdesigner: "平面设计师"
         },
         // 使命部分
-        missionTitle: "遗迹之地的使命",
-        missionSubtitle: "创造不凡，传承经典",
+        missionTitle: "使命",
+        missionSubtitle: "构建未来，传承经典",
         innovation: {
             title: "创新",
-            subtitle: "前沿科技",
-            description: "致力于探索和应用前沿技术，为玩家带来极致的游戏体验。通过不断创新，推动游戏技术发展。"
+            subtitle: "突破边界",
+            description: "我们拥抱前沿技术和创新理念，致力于打造卓越的游戏体验。对探索的热忱驱动我们不断进化和改进。"
         },
         community: {
             title: "社区",
-            subtitle: "社区建设",
-            description: "打造一个充满活力和创造力的游戏社区，让每位玩家都能找到归属感，共同成长。"
+            subtitle: "共建共享",
+            description: "我们营造充满活力的社区环境，让创意蓬勃发展，让深厚友谊自然形成。每个声音都在塑造我们共同的数字世界。"
         },
         // 联系部分
         contactTitle: "联系我们",
-        contactSubtitle: "寻求合作或加入我们？",
+        contactSubtitle: "有想法？一起来聊聊！",
+        // Hero section translations
+        hero: {
+            badge: "开源 & 商业",
+            title: "专业的 Minecraft 全能制作团队",
+            description: "集服务器开发、建筑设计、技术创新于一体的 Minecraft 专业团队。<br>专注于自主开发与运营大型沉浸式文明模拟服务器，同时深度参与开源生态建设，为 Minecraft 插件开发领域提供企业级技术框架与专业解决方案。",
+            viewProjects: "查看我们的项目",
+            github: "GitHub",
+            stats: {
+                teamMembers: "团队成员",
+                majorProjects: "主要项目",
+                codeCommits: "代码提交",
+                linesOfCode: "代码行数"
+            }
+        },
+        // Core business section
+        coreProjects: {
+            title: "我们的核心项目",
+            description: "两个旗舰项目展示我们在现代 Minecraft 制作方面的专业能力",
+            library: {
+                title: "遗迹之地库",
+                subtitle: "企业级 Minecraft 服务器插件开发框架",
+                description: "专为 Minecraft 服务器插件开发设计的企业级模块化框架，提供专业的开发工具和技术支持。",
+                tags: ["开源", "企业级", "插件开发", "模块化框架"],
+                button: "探索库"
+            },
+            server: {
+                title: "遗迹之地服务器",
+                subtitle: "Minecraft 文明模拟平台",
+                description: "一个专注于文明模拟、国家建设和协作游戏体验的沉浸式 Minecraft 服务器，为繁荣的社区服务。",
+                tags: ["商业", "多人游戏", "文明建设", "社区"],
+                button: "加入服务器"
+            }
+        },
         qqgroup: {
             title: "QQ 群",
             description: "加入我们的社区",
-            button: "立即加入"
+            button: "1022665227"
         },
         github: {
             title: "GitHub",
@@ -263,26 +329,26 @@ const translations = {
         // 使命卡片
         heritage: {
             title: "传承",
-            subtitle: "文化传承",
-            description: "将游戏与文化完美融合，通过独特的游戏玩法和故事，传递积极的价值观。"
+            subtitle: "有意义的遗产",
+            description: "我们创造融合文化深度与吸引力玩法的持久体验。每个项目都承载着目标，为玩家和社区带来积极影响。"
         },
         experience: {
             title: "体验",
-            subtitle: "用户体验至上",
-            description: "致力于通过精心设计和流畅交互创造卓越的用户体验。每一个细节都在打造难忘的游戏时刻。"
+            subtitle: "精雕细琢",
+            description: "我们精心设计每一次交互，创造无缝、引人入胜的体验。从直观的界面到沉浸式的游戏玩法，品质体现在每个细节中。"
         },
         growth: {
             title: "成长",
-            subtitle: "可持续发展",
-            description: "通过学习和适应促进持续成长。构建随技术和社区需求发展的可持续解决方案。"
+            subtitle: "持续进化",
+            description: "我们相信迭代改进，从每次挑战中学习成长。对成长的承诺确保每个项目在质量和创新方面都超越前作。"
         },
         opensource: {
             title: "开源",
-            subtitle: "分享与贡献",
-            description: "致力于开源开发和知识共享。我们相信协作创新，并回馈开发者社区。"
+            subtitle: "协作创新",
+            description: "我们通过开源工具和框架为全球开发者社区做出贡献。知识共享加速创新，为每个人创造机会。"
         },
         sections: {
-            mission: "遗迹之地的使命",
+            mission: "使命",
             library: "遗迹之地库",
             server: "遗迹之地服务器",
             contact: "联系我们"
@@ -480,8 +546,93 @@ function updateContent() {
     }
 
     // 主标题和Logo
-    safeSetText('.main-title', t.title);
+    const mainTitle = document.querySelector('.main-title');
+    if (mainTitle) {
+        mainTitle.setAttribute('data-lang', currentLang);
+        if (currentLang === 'en') {
+            mainTitle.innerHTML = t.hero.title.replace(/Minecraft Complete Production Team/g, '<span class="highlight">Minecraft Complete Production Team</span>');
+        } else {
+            mainTitle.innerHTML = t.hero.title.replace(/Minecraft 全能制作团队/g, '<span class="highlight">Minecraft 全能制作团队</span>');
+        }
+    }
     safeSetText('.logo', t.title);
+    
+    // Hero section
+    safeSetText('.badge-text', t.hero.badge);
+    const heroDescription = document.querySelector('.hero-description');
+    if (heroDescription) {
+        heroDescription.innerHTML = t.hero.description;
+    }
+    
+    // Hero buttons
+    const viewProjectsBtn = document.querySelector('.btn-primary');
+    if (viewProjectsBtn) {
+        viewProjectsBtn.textContent = t.hero.viewProjects;
+    }
+    
+    const githubBtn = document.querySelector('.btn-secondary');
+    if (githubBtn) {
+        // 保留 SVG 图标，只更新文本
+        const svg = githubBtn.querySelector('svg');
+        githubBtn.innerHTML = '';
+        if (svg) githubBtn.appendChild(svg);
+        githubBtn.appendChild(document.createTextNode(t.hero.github));
+    }
+    
+    // Hero stats
+    const stats = document.querySelectorAll('.stat');
+    if (stats.length >= 4) {
+        stats[0].querySelector('.stat-label').textContent = t.hero.stats.teamMembers;
+        stats[1].querySelector('.stat-label').textContent = t.hero.stats.majorProjects;
+        stats[2].querySelector('.stat-label').textContent = t.hero.stats.codeCommits;
+        stats[3].querySelector('.stat-label').textContent = t.hero.stats.linesOfCode;
+    }
+    
+    // Core Projects section
+    safeSetText('.business-title', t.coreProjects.title);
+    safeSetText('.business-description', t.coreProjects.description);
+    
+    // Core Projects cards
+    const businessCards = document.querySelectorAll('.business-card');
+    if (businessCards.length >= 2) {
+        // Library card
+        const libraryCard = businessCards[0];
+        libraryCard.querySelector('h3').textContent = t.coreProjects.library.title;
+        libraryCard.querySelector('p').textContent = t.coreProjects.library.subtitle;
+        libraryCard.querySelector('.card-description').textContent = t.coreProjects.library.description;
+        const libraryTags = libraryCard.querySelectorAll('.card-features span');
+        libraryTags.forEach((tag, i) => {
+            if (t.coreProjects.library.tags[i]) {
+                tag.textContent = t.coreProjects.library.tags[i];
+            }
+        });
+        const libraryLink = libraryCard.querySelector('.card-link');
+        if (libraryLink) {
+            const svg = libraryLink.querySelector('svg');
+            libraryLink.innerHTML = '';
+            if (svg) libraryLink.appendChild(svg);
+            libraryLink.appendChild(document.createTextNode(t.coreProjects.library.button));
+        }
+        
+        // Server card
+        const serverCard = businessCards[1];
+        serverCard.querySelector('h3').textContent = t.coreProjects.server.title;
+        serverCard.querySelector('p').textContent = t.coreProjects.server.subtitle;
+        serverCard.querySelector('.card-description').textContent = t.coreProjects.server.description;
+        const serverTags = serverCard.querySelectorAll('.card-features span');
+        serverTags.forEach((tag, i) => {
+            if (t.coreProjects.server.tags[i]) {
+                tag.textContent = t.coreProjects.server.tags[i];
+            }
+        });
+        const serverLink = serverCard.querySelector('.card-link');
+        if (serverLink) {
+            const svg = serverLink.querySelector('svg');
+            serverLink.innerHTML = '';
+            if (svg) serverLink.appendChild(svg);
+            serverLink.appendChild(document.createTextNode(t.coreProjects.server.button));
+        }
+    }
 
     // 组织部分
     safeSetText('.org-title', t.orgTitle);
@@ -693,14 +844,69 @@ document.addEventListener('DOMContentLoaded', () => {
     // 绑定按钮事件
     const langBtn = document.querySelector('.lang-btn');
     if (langBtn) {
+        console.log('Language button found, binding event');
         langBtn.removeEventListener('click', toggleLanguage);
         langBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            console.log('Language button clicked');
             toggleLanguage();
         });
+    } else {
+        console.error('Language button not found');
     }
 
     // 初始化内容和按钮文本
     updateContent();
     updateButtonText();
-}); 
+    
+    // 初始化数字动画
+    initCountingAnimations();
+});
+
+// 数字计数动画函数
+function animateNumber(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16); // 60 FPS
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        
+        // 格式化数字显示
+        if (target >= 1000) {
+            element.textContent = Math.floor(current).toLocaleString();
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
+// 初始化计数动画
+function initCountingAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number[data-target]');
+                statNumbers.forEach(numberEl => {
+                    const target = parseInt(numberEl.getAttribute('data-target'));
+                    // 延迟启动动画，让页面加载动画先完成
+                    setTimeout(() => {
+                        animateNumber(numberEl, target, 2500);
+                    }, 1800);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        observer.observe(heroStats);
+    }
+}
